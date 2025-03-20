@@ -1,0 +1,22 @@
+[
+    {
+        "group": "Alchemist",
+        "sports": 0,
+        "cultural": 0
+    },
+    {
+        "group": "Mavericks",
+        "sports": 0,
+        "cultural": 5
+    },
+    {
+        "group": "Phoenix",
+        "sports": 0,
+        "cultural": 0
+    },
+    {
+        "group": "Titans",
+        "sports": 159,
+        "cultural": 0
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "timestamp": "2025-03-20T12:07:09.295452",
+        "group": "Titans",
+        "category": "sports",
+        "event": "Football Tournament",
+        "points": 99
+    },
+    {
+        "timestamp": "2025-03-20T12:54:43.178405",
+        "group": "Titans",
+        "category": "sports",
+        "event": "Badminton Championship",
+        "points": 50
+    },
+    {
+        "timestamp": "2025-03-20T12:54:53.906338",
+        "group": "Titans",
+        "category": "sports",
+        "event": "Badminton Championship",
+        "points": 10
+    },
+    {
+        "timestamp": "2025-03-20T14:13:08.315634",
+        "group": "Mavericks",
+        "category": "cultural",
+        "event": "Art Exhibition",
+        "points": 5
+    }
+]

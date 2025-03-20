@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Athletic Meet",
+        "date": "March 29, 2025",
+        "description": "Annual athletic competition featuring track and field events, relay races, and more.",
+        "category": "sports",
+        "registrationLink": "register-athletics.html",
+        "event_type": "running"
+    },
+    {
+        "name": "Football Tournament",
+        "date": "April 1-3, 2025",
+        "description": "Inter-college football competition with teams competing for the championship trophy.",
+        "category": "sports",
+        "registrationLink": "register-football.html",
+        "event_type": "football"
+    },
+    {
+        "name": "Badminton Championship",
+        "date": "April 2-4, 2025",
+        "description": "Exciting basketball matches between college teams with knockout rounds.",
+        "category": "sports",
+        "registrationLink": "register-basketball.html",
+        "event_type": "badminton"
+    },
+    {
+        "name": "Cricket Tournament",
+        "date": "March 31 - April 1, 2025",
+        "description": "T20 cricket matches between departments and colleges.",
+        "category": "sports",
+        "registrationLink": "register-cricket.html",
+        "event_type": "cricket"
+    },
+    {
+        "name": "Dance Competition",
+        "date": "April 7, 2025",
+        "description": "Showcase your dancing skills with solo, duo, and group performances.",
+        "category": "cultural",
+        "registrationLink": "register-dance.html",
+        "event_type": "dancing"
+    },
+    {
+        "name": "Battle of Bands",
+        "date": "April 8, 2025",
+        "description": "Musical competition for college bands to demonstrate their talent.",
+        "category": "cultural",
+        "registrationLink": "register-bands.html",
+        "event_type": "singing"
+    },
+    {
+        "name": "Art Exhibition",
+        "date": "April 7-10, 2025",
+        "description": "Display of paintings, sculptures, and other art forms created by students.",
+        "category": "cultural",
+        "registrationLink": "register-art.html",
+        "event_type": "art"
+    },
+    {
+        "name": "Fashion Show",
+        "date": "April 9, 2025",
+        "description": "Trendy fashion showcase by student designers and models.",
+        "category": "cultural",
+        "registrationLink": "register-fashion.html",
+        "event_type": "fashion"
+    },
+    {
+        "name": "Stage Program",
+        "date": "April 11, 2025",
+        "description": "Final showdown and closure of MSIS College fest Felicity. Register below to showcase your talent",
+        "category": "special",
+        "registrationLink": "https://forms.gle/nRFYkhZYVVcRxSyL6",
+        "event_type": "stage"
+    }
+]

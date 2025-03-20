@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Fest 2025</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>FELICITY 2025</h1>
+            <p>The Ultimate College Experience</p>
+            <div class="countdown">
+                <h2>Countdown to the Showdown</h2>
+                <div class="countdown-timer" id="countdown">
+                    <div class="countdown-box">
+                        <span id="days">00</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="hours">00</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="minutes">00</span>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="seconds">00</span>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#points">Points Table</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" id="adminLoginBtn"><i class="fas fa-lock"></i> Admin</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2 class="section-title">About The Fest</h2>
+            <p>Welcome to COLLEGIA FEST 2025, the most anticipated college festival of the year! Join us for two exciting weeks of exhilarating competitions, workshops, cultural performances, and unforgettable memories.</p>
+            <p>Our first week is dedicated to sports events including an athletic meet, while the second week features cultural celebrations. The grand finale on April 11th will showcase an incredible stage program with performances from top artists!</p>
+        </section>
+
+        <section id="events" class="events-section">
+            <h2 class="section-title">Featured Events</h2>
+            <div class="events-tab">
+                <button class="tab-btn active" data-category="sports">Sports Events</button>
+                <button class="tab-btn" data-category="cultural">Cultural Events</button>
+                <button class="tab-btn" data-category="special">Finale</button>
+            </div>
+            <div class="events-grid" id="eventsGrid">
+                <!-- Events will be added dynamically via JavaScript -->
+            </div>
+        </section>
+
+        <section id="schedule">
+            <h2 class="section-title">Event Schedule</h2>
+            <div class="schedule-tabs">
+                <button class="schedule-tab active" data-week="week1">Week 1 (Sports)</button>
+                <button class="schedule-tab" data-week="week2">Week 2 (Cultural)</button>
+                <button class="schedule-tab" data-week="finale">Grand Finale</button>
+            </div>
+            <div id="scheduleContent">
+                <!-- Schedule will be added dynamically via JavaScript -->
+            </div>
+        </section>
+
+        <section id="points" class="points-table">
+            <div class="container">
+                <h2 class="section-title">Points Table</h2>
+                <div class="points-header">
+                    <div class="table-controls">
+                        <select id="eventSelector">
+                            <option value="all">All Events</option>
+                            <option value="running">Running Events</option>
+                            <option value="shotput">Shot Put</option>
+                            <option value="longjump">Long Jump</option>
+                            <option value="tugofwar">Tug of War</option>
+                            <option value="cricket">Cricket</option>
+                            <option value="badminton">Badminton</option>
+                            <option value="tabletennis">Table Tennis</option>
+                            <option value="singing">Singing</option>
+                            <option value="dancing">Dancing</option>
+                            <option value="cooking">Cooking Without Fire</option>
+                        </select>
+                        <button id="refreshTable" class="refresh-btn">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                    <div class="auto-refresh">
+                        <label for="autoRefresh">
+                            <input type="checkbox" id="autoRefresh" checked>
+                            Auto-refresh (30s)
+                        </label>
+                        <span id="refreshTimer">30</span>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="pointsTable">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Group</th>
+                                <th>Sports</th>
+                                <th>Cultural</th>
+                                <th>Total Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table body will be populated by JavaScript -->
+                            <tr class="loading-row">
+                                <td colspan="5">Loading points data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: info@collegiafest.edu</p>
+            <p>Phone: (123) 456-7890</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/msismanipal/" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/msismanipal/" class="social-btn"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/school/msismanipal" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com/@msismanipal?si=XbiQV3_WxMl4U2Cn" class="social-btn"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>© 2025 COLLEGIA FEST. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Admin Login Modal -->
+    <div id="adminLoginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Admin Login</h2>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="adminUsername">Username:</label>
+                    <input type="text" id="adminUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password:</label>
+                    <input type="password" id="adminPassword" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+                <p id="loginError" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div id="adminPanelModal" class="modal">
+        <div class="modal-content admin-panel-content">
+            <span class="close">×</span>
+            <div class="admin-header">
+                <h2>Admin Panel</h2>
+                <button id="adminLogoutBtn" class="logout-btn">Logout</button>
+            </div>
+            <div class="admin-panel">
+                <h3>Update Points</h3>
+                <form id="updatePointsForm">
+                    <div class="form-group">
+                        <label for="groupSelect">Group:</label>
+                        <select id="groupSelect" required>
+                            <option value="">Select Group</option>
+                            <option value="Alchemist">Alchemist</option>
+                            <option value="Mavericks">Mavericks</option>
+                            <option value="Phoenix">Phoenix</option>
+                            <option value="Titans">Titans</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categorySelect">Category:</label>
+                        <select id="categorySelect" required>
+                            <option value="">Select Category</option>
+                            <option value="sports">Sports</option>
+                            <option value="cultural">Cultural</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventSelect">Event:</label>
+                        <select id="eventSelect" required>
+                            <option value="">Select Event</option>
+                            <!-- Will be populated based on category selection -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pointsInput">Points to Add:</label>
+                        <input type="number" id="pointsInput" min="1" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" id="updateButton" class="update-btn">Update Points</button>
+                    </div>
+                </form>
+
+                <div class="history-section">
+                    <h3>Recent Updates</h3>
+                    <div class="history-container">
+                        <ul id="pointsHistory">
+                            <!-- History items will be added dynamically -->
+                            <li class="loading-item">Loading history...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot" class="chatbot">
+        <div id="chatbotHeader" class="chatbot-header">
+            Registration Chatbot
+            <span id="chatbotClose" class="chatbot-close">&times;</span>
+        </div>
+        <div id="chatbotBody" class="chatbot-body">
+            <div class="chatbot-message bot">Hi! Need help with event registration? Choose an event below:</div>
+            <!-- Preset event options -->
+            <div id="eventOptions" class="chatbot-options">
+                <button class="chatbot-option" data-event="athletic meet">Athletic Meet</button>
+                <button class="chatbot-option" data-event="football tournament">Football Tournament</button>
+                <button class="chatbot-option" data-event="badminton championship">Badminton Championship</button>
+                <button class="chatbot-option" data-event="cricket tournament">Cricket Tournament</button>
+            </div>
+        </div>
+    </div>
+    <button id="chatbotToggle" class="chatbot-toggle">Chat</button>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
